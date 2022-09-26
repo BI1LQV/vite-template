@@ -9,10 +9,12 @@ import "@unocss/reset/tailwind.css"
 import "./styles/main.css"
 import "uno.css"
 
-console.log("BUILD INFO")
-console.log("build time:", now)
-console.log("commit msg:", commitMessage)
-console.log("version:", sha)
+if (!import.meta.env.DEV) {
+  console.log("BUILD INFO")
+  console.log("build time:", now)
+  console.log("commit msg:", commitMessage)
+  console.log("version:", sha)
+}
 
 const app = createApp(App)
 const router = createRouter({
