@@ -7,6 +7,7 @@ const router = useRouter()
 const go = () => {
   if (name) { router.push(`/hi/${encodeURIComponent(name)}`) }
 }
+const inputVal = $ref("")
 </script>
 
 <template>
@@ -37,7 +38,8 @@ const go = () => {
       outline="none active:none"
       @keydown.enter="go"
     >
-
+    <div py-4 />
+    <el-input v-model="inputVal" class="w-20"></el-input>
     <div>
       <button
         class="m-3 text-sm btn"
