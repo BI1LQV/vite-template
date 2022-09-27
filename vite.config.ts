@@ -24,7 +24,7 @@ export default defineConfig({
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
-      importMode(filepath, options) {
+      importMode(_filepath, _options) {
         return "sync"
       },
     }),

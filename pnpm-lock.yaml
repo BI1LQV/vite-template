@@ -10,10 +10,12 @@ specifiers:
   '@vueuse/core': ^9.3.0
   element-plus: ^2.2.17
   eslint: ^8.24.0
+  esno: ^0.16.3
   jsdom: ^20.0.0
   picocolors: ^1.0.0
   pinia: ^2.0.22
   pnpm: ^7.12.2
+  simple-git-hooks: ^2.8.0
   typescript: ^4.8.3
   unocss: ^0.45.23
   unplugin-auto-import: ^0.11.2
@@ -29,7 +31,6 @@ specifiers:
 dependencies:
   '@vueuse/core': 9.3.0_vue@3.2.39
   element-plus: 2.2.17_vue@3.2.39
-  picocolors: 1.0.0
   pinia: 2.0.22_arz4dztosvwy2ghjrlh2wdhejm
   unplugin-auto-import: 0.11.2_@vueuse+core@9.3.0
   unplugin-vue-components: 0.22.7_vue@3.2.39
@@ -44,8 +45,11 @@ devDependencies:
   '@vitejs/plugin-vue': 3.1.0_vite@3.1.3+vue@3.2.39
   '@vue/test-utils': 2.0.2_vue@3.2.39
   eslint: 8.24.0
+  esno: 0.16.3
   jsdom: 20.0.0
+  picocolors: 1.0.0
   pnpm: 7.12.2
+  simple-git-hooks: 2.8.0
   typescript: 4.8.3
   unocss: 0.45.23_vite@3.1.3
   vite: 3.1.3
@@ -221,6 +225,27 @@ packages:
     dependencies:
       vue: 3.2.39
     dev: false
+
+  /@esbuild-kit/cjs-loader/2.3.3:
+    resolution: {integrity: sha512-Rt4O1mXlPEDVxvjsHLgbtHVdUXYK9C1/6ThpQnt7FaXIjUOsI6qhHYMgALhNnlIMZffag44lXd6Dqgx3xALbpQ==}
+    dependencies:
+      '@esbuild-kit/core-utils': 2.3.2
+      get-tsconfig: 4.2.0
+    dev: true
+
+  /@esbuild-kit/core-utils/2.3.2:
+    resolution: {integrity: sha512-aQwy1Hdd02ymjyMyyrhtyuZGv5W+mVZmj3DTKFV0TnB1AUgMBV40tXySpsGySe8vLvSe0c0TaqTc2FUo8/YlNQ==}
+    dependencies:
+      esbuild: 0.15.7
+      source-map-support: 0.5.21
+    dev: true
+
+  /@esbuild-kit/esm-loader/2.4.2:
+    resolution: {integrity: sha512-N9dPKAj8WOx6djVnStgILWXip4fjDcBk9L7azO0/uQDpu8Ee0eaL78mkN4Acid9BzvNAKWwdYXFJZnsVahNEew==}
+    dependencies:
+      '@esbuild-kit/core-utils': 2.3.2
+      get-tsconfig: 4.2.0
+    dev: true
 
   /@esbuild/linux-loong64/0.15.7:
     resolution: {integrity: sha512-IKznSJOsVUuyt7cDzzSZyqBEcZe+7WlBqTVXiF1OXP/4Nm387ToaXZ0fyLwI1iBlI/bzpxVq411QE2/Bt2XWWw==}
@@ -1069,6 +1094,10 @@ packages:
 
   /browser-process-hrtime/1.0.0:
     resolution: {integrity: sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==}
+    dev: true
+
+  /buffer-from/1.1.2:
+    resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
     dev: true
 
   /builtin-modules/3.3.0:
@@ -2075,6 +2104,13 @@ packages:
       - supports-color
     dev: true
 
+  /esno/0.16.3:
+    resolution: {integrity: sha512-6slSBEV1lMKcX13DBifvnDFpNno5WXhw4j/ff7RI0y51BZiDqEe5dNhhjhIQ3iCOQuzsm2MbVzmwqbN78BBhPg==}
+    hasBin: true
+    dependencies:
+      tsx: 3.9.0
+    dev: true
+
   /espree/9.4.0:
     resolution: {integrity: sha512-DQmnRpLj7f6TgN/NYb0MTzJXL+vJF9h3pHy4JhCIs3zwcgez8xmGg3sXHcEO97BrmO2OSvCwMdfdlyl+E9KjOw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -2308,6 +2344,10 @@ packages:
     dependencies:
       call-bind: 1.0.2
       get-intrinsic: 1.1.2
+    dev: true
+
+  /get-tsconfig/4.2.0:
+    resolution: {integrity: sha512-X8u8fREiYOE6S8hLbq99PeykTDoLVnxvF4DjWKJmz9xy2nNRdUcV8ZN9tniJFeKyTU3qnC9lL8n4Chd6LmVKHg==}
     dev: true
 
   /git-config-path/2.0.0:
@@ -3586,6 +3626,12 @@ packages:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
 
+  /simple-git-hooks/2.8.0:
+    resolution: {integrity: sha512-ocmZQORwa6x9mxg+gVIAp5o4wXiWOHGXyrDBA0+UxGKIEKOyFtL4LWNKkP/2ornQPdlnlDGDteVeYP5FjhIoWA==}
+    hasBin: true
+    requiresBuild: true
+    dev: true
+
   /sirv/2.0.2:
     resolution: {integrity: sha512-4Qog6aE29nIjAOKe/wowFTxOdmbEZKb+3tsLljaBRzJwtqto0BChD2zzH0LhgCSXiI+V7X+Y45v14wBZQ1TK3w==}
     engines: {node: '>= 10'}
@@ -3603,6 +3649,13 @@ packages:
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
+
+  /source-map-support/0.5.21:
+    resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==}
+    dependencies:
+      buffer-from: 1.1.2
+      source-map: 0.6.1
+    dev: true
 
   /source-map/0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
@@ -3788,6 +3841,17 @@ packages:
     dependencies:
       tslib: 1.14.1
       typescript: 4.8.3
+    dev: true
+
+  /tsx/3.9.0:
+    resolution: {integrity: sha512-ofxsE+qjqCYYq4UBt5khglvb+ESgxef1YpuNcdQI92kvcAT2tZVrnSK3g4bRXTUhLmKHcC5q8vIZA47os/stng==}
+    hasBin: true
+    dependencies:
+      '@esbuild-kit/cjs-loader': 2.3.3
+      '@esbuild-kit/core-utils': 2.3.2
+      '@esbuild-kit/esm-loader': 2.4.2
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: true
 
   /type-check/0.3.2:
