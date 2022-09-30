@@ -9,6 +9,7 @@ import AutoImport from "unplugin-auto-import/vite"
 import Components from "unplugin-vue-components/vite"
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers"
 import BuildInfo from "vite-plugin-info"
+import Inspect from "vite-plugin-inspect"
 
 export default defineConfig({
   resolve: {
@@ -39,6 +40,7 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
       dirs: [],
     }),
+    Inspect(),
   ],
 
   // https://github.com/vitest-dev/vitest
