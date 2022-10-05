@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router"
-
+import { useCounterStore } from "@/store"
 const name = $ref("")
 
 const router = useRouter()
@@ -8,6 +8,7 @@ const go = () => {
   if (name) { router.push(`/hi/${encodeURIComponent(name)}`) }
 }
 const inputVal = $ref("")
+useCounterStore()
 </script>
 
 <template>
