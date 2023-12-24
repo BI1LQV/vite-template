@@ -1,14 +1,14 @@
 /// <reference types="vitest" />
 
-import path from "path"
+import path from "node:path"
 import { defineConfig } from "vite"
 import Vue from "@vitejs/plugin-vue"
 import Pages from "vite-plugin-pages"
 import Unocss from "unocss/vite"
 import AutoImport from "unplugin-auto-import/vite"
 import Components from "unplugin-vue-components/vite"
-import { ElementPlusResolver } from "unplugin-vue-components/resolvers"
-import BuildInfo from "vite-plugin-info"
+import { NaiveUiResolver } from "unplugin-vue-components/resolvers"
+import BuildInfo from "unplugin-info/vite"
 import Inspect from "vite-plugin-inspect"
 
 export default defineConfig({
@@ -34,10 +34,10 @@ export default defineConfig({
     // see unocss.config.ts for config
     Unocss(),
     AutoImport({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [NaiveUiResolver()],
     }),
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [NaiveUiResolver()],
       dirs: [],
     }),
     Inspect(),

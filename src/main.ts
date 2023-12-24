@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { createApp } from "vue"
 import { createRouter, createWebHistory } from "vue-router"
 import { createPinia } from "pinia"
@@ -15,7 +16,7 @@ if (!import.meta.env.DEV) {
   console.log("BUILD INFO")
   console.log("Build Time:", now)
   console.log("Version:", sha)
-  console.log("Author: BI1LQV, seeking for a warm hug")
+  console.log("Author: BI1LQV")
 }
 
 const app = createApp(App)

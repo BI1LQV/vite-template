@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router"
 import { useCounterStore } from "@/store"
+
 const name = $ref("")
 
 const router = useRouter()
-const go = () => {
-  if (name) { router.push(`/hi/${encodeURIComponent(name)}`) }
+function go() {
+  if (name)
+    router.push(`/hi/${encodeURIComponent(name)}`)
 }
 const inputVal = $ref("")
 useCounterStore()
@@ -40,7 +42,7 @@ useCounterStore()
       @keydown.enter="go"
     >
     <div py-4 />
-    <el-input v-model="inputVal" class="w-20"></el-input>
+    <n-input v-model="inputVal" class="w-20"></n-input>
     <div>
       <button
         class="m-3 text-sm btn"
