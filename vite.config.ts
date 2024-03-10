@@ -19,9 +19,7 @@ export default defineConfig({
   },
   plugins: [
     BuildInfo(),
-    Vue({
-      reactivityTransform: true,
-    }),
+    Vue(),
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
